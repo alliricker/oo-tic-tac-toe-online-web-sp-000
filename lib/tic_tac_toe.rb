@@ -95,4 +95,18 @@ def draw?
   end
 end
 
+def over?
+  if won? || full?
+    return true
+  else
+    return false
+  end
+end
+
+def winner
+   if won?
+      return @board[won?[0]]
+   end
+end
+
 end
