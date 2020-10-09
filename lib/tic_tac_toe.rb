@@ -80,5 +80,19 @@ if (@board[win_combination[0]]) == "X" &&
 end
 end
 
+def full?
+  @board.all? {|i| i == "X" || i == "O"}
+end
+
+def draw?
+  if !won? && full?
+    return true
+  elsif !won?
+    return false
+  else
+    won?
+    return false
+  end
+end
 
 end
